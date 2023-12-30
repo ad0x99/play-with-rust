@@ -7,6 +7,9 @@ mod reference_and_borrowing;
 mod return_values_and_scope;
 mod scopes;
 mod shadowing;
+mod struct_method;
+mod struct_method_multiple_impl;
+mod struct_method_multiple_parameters;
 mod structs;
 mod the_slice_type;
 mod variables;
@@ -136,4 +139,8 @@ fn main() {
     println!("==========Structs=========");
     // Structs
     structs::run_structs();
+
+    println!("==========Struct - Methods=========");
+    // Struct Methods
+    struct_method::run_struct_methods();
 }
