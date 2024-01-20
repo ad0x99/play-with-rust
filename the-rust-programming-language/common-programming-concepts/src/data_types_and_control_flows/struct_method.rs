@@ -1,14 +1,13 @@
-use crate::struct_method_multiple_impl::run_method_multiple_impl;
-use crate::struct_method_multiple_parameters::run_associated_function;
-use crate::struct_method_multiple_parameters::run_method_multiple_parameters;
+use crate::data_types_and_control_flows::struct_method_multiple_impl::run_method_multiple_impl;
+use crate::data_types_and_control_flows::struct_method_multiple_parameters;
 
 pub fn run_struct_methods() {
     println!("==========Struct - One Method=========");
     print_one_method();
 
     println!("==========Struct - Multiple Method Params=========");
-    run_method_multiple_parameters();
-    run_associated_function();
+    struct_method_multiple_parameters::run_method_multiple_parameters();
+    struct_method_multiple_parameters::run_associated_function();
 
     println!("==========Struct - Multiple Impl Block=========");
     run_method_multiple_impl();
