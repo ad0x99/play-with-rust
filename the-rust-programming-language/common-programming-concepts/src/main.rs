@@ -13,6 +13,7 @@ mod struct_method_multiple_parameters;
 mod structs;
 mod the_slice_type;
 mod variables;
+mod enums;
 
 fn main() {
     println!("==========Variable & Mutability=========");
@@ -143,4 +144,7 @@ fn main() {
     println!("==========Struct - Methods=========");
     // Struct Methods
     struct_method::run_struct_methods();
+
+    println!("==========Enums=========");
+    enums::run_enums()
 }
