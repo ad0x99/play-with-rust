@@ -30,7 +30,7 @@ fn print_user_struct() {
     println!("email: {}", user.email);
 
     let user2 = User {
-        email: String::from("another@example.com"),
+        email: String::from("another@ownership_and_references.com"),
         ..user
     };
 

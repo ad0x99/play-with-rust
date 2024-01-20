@@ -57,7 +57,7 @@ fn signature_slice() {
     // `first_word_with_slice` works on slices of `String`s, whether partial or whole.
     let word_0_6 = first_word_with_slice(&my_string[0..6]);
     let word_whole = first_word_with_slice(&my_string[..]);
-    // `first_word_with_slice` also works on references to `String`s, which
+    // `first_word_with_slice` also works on ownership_and_references to `String`s, which
     // are equivalent to whole slices of `String`s.
     let word_reference = first_word_with_slice(&my_string);
 

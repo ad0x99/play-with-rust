@@ -1,19 +1,20 @@
-mod dangling_references;
-mod functions;
-mod loops;
-mod numeric_operations;
-mod ownership_and_function;
-mod reference_and_borrowing;
-mod return_values_and_scope;
-mod scopes;
-mod shadowing;
-mod struct_method;
-mod struct_method_multiple_impl;
-mod struct_method_multiple_parameters;
-mod structs;
-mod the_slice_type;
-mod variables;
-mod enums;
+mod ownership_and_references;
+mod data_types_and_control_flows;
+
+use crate::ownership_and_references::dangling_references;
+use crate::ownership_and_references::reference_and_borrowing;
+use crate::ownership_and_references::ownership_and_function;
+use crate::ownership_and_references::return_values_and_scope;
+use crate::ownership_and_references::scopes;
+use crate::data_types_and_control_flows::variables;
+use crate::data_types_and_control_flows::shadowing;
+use crate::data_types_and_control_flows::numeric_operations;
+use crate::data_types_and_control_flows::functions;
+use crate::data_types_and_control_flows::the_slice_type;
+use crate::data_types_and_control_flows::structs;
+use crate::data_types_and_control_flows::struct_method;
+use crate::data_types_and_control_flows::enums;
+use crate::data_types_and_control_flows::loops;
 
 fn main() {
     println!("==========Variable & Mutability=========");

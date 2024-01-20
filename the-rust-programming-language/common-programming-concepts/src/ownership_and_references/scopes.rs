@@ -19,7 +19,7 @@ fn variable_and_data_interacting_with_move() {
     println!("x: {x}");
     println!("y: {y}");
 
-    // An example with String
+    // An ownership_and_references with String
     // Bind the string `hello` to s1
     // And then make a copy of value s1 and bind it to s2
     // But in this case, because we're not copying the heap memory where the string is stored
