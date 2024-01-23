@@ -18,4 +18,7 @@ fn main() {
 
     println!("=====print_using_pub_with_enums=====");
     restaurant::print_using_pub_with_enums();
+
+    println!("=====print_add_new_name_with_as_keyword=====");
+    restaurant::print_add_new_name_with_as_keyword();
 }

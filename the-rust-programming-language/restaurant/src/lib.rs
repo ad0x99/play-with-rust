@@ -3,6 +3,7 @@ mod path_scope_with_use_keyword;
 mod relative_path_with_super;
 mod using_pub_with_struct;
 mod using_pub_with_enums;
+mod new_name_with_as_key_word;
 
 mod front_of_house {
     pub mod hosting {
@@ -69,4 +70,12 @@ pub fn print_using_pub_with_struct() {
 */
 pub fn print_using_pub_with_enums() {
     using_pub_with_enums::eat_at_restaurant();
+}
+
+/*
+* Adding new name with `as` keyword
+*/
+pub fn print_add_new_name_with_as_keyword() {
+    new_name_with_as_key_word::function1().expect("Do something in fn 1");
+    new_name_with_as_key_word::function2().expect("Do something in fn 2");
 }
