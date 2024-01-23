@@ -1,8 +1,18 @@
+mod using_shortcut_path;
+mod path_scope_with_use_keyword;
+mod relative_path_with_super;
+mod using_pub_with_struct;
+mod using_pub_with_enums;
+
 mod front_of_house {
     pub mod hosting {
-        pub fn add_to_waitlist() {}
+        pub fn add_to_waitlist() {
+            println!("Adding to wait list...")
+        }
 
-        fn seat_at_table() {}
+        fn seat_at_table() {
+            println!("Seating at the table...")
+        }
     }
 
     pub mod serving {
@@ -26,91 +36,37 @@ pub fn eat_at_restaurant() {
 /*
 * Using shortcut path
 */
-// use front_of_house::hosting;
-//
-// pub fn eat_at_restaurant() {
-//     // Using shortcut path
-//     hosting::add_to_waitlist();
-// }
+pub fn print_shortcut_path() {
+    using_shortcut_path::eat_at_restaurant();
+}
+
 
 /*
 * Bringing paths into scope with the `use` keyword
 */
-// use crate::front_of_house::hosting;
-//
-// mod customer {
-//     use crate::front_of_house::hosting;
-//
-//     pub fn eat_at_restaurant() {
-//         hosting::add_to_waitlist();
-//     }
-// }
+pub fn print_using_path_with_use_key_word() {
+    path_scope_with_use_keyword::customer::eat_at_restaurant();
+}
 
 
 /*
-* Relative path with  `super`
+* Relative path with `super`
 */
-// fn deliver_order() {}
-//
-// mod back_of_house {
-//     fn fix_incorrect_order() {
-//         cook_order();
-//         super::deliver_order();
-//     }
-//
-//     fn cook_order() {}
-// }
+pub fn print_relative_path_with_super() {
+    relative_path_with_super::back_of_house::fix_incorrect_order();
+}
 
 
 /*
 * Using `pub` with struct
 */
-// mod back_of_house {
-//     pub struct Breakfast {
-//         pub toast: String,
-//         seasonal_fruit: String,
-//     }
-//
-//     impl Breakfast {
-//         pub fn summer(toast: &str) -> Breakfast {
-//             Breakfast {
-//                 toast: String::from(toast),
-//                 seasonal_fruit: String::from("peaches"),
-//             }
-//         }
-//     }
-// }
-//
-// pub fn eat_at_restaurant() {
-//     // Order a breakfast in the summer with Rye toast.
-//     let mut meal = back_of_house::Breakfast::summer("Rye");
-//
-//     // Change our mind about what bread we'd like.
-//     meal.toast = String::from("Wheat");
-//     println!("I'd like {} toast please", meal.toast);
-//
-//     // The next line won't compile if we uncomment it; we're not
-//     // allowed to see or modify the seasonal fruit that comes
-//     // with the meal.
-//     // meal.seasonal_fruit = String::from("blueberries");
-// }
+pub fn print_using_pub_with_struct() {
+    using_pub_with_struct::eat_at_restaurant();
+}
 
 /*
 * Using `pub` with enums
 */
-// mod back_of_house {
-//     #[derive(Debug)]
-//     pub enum Appetizer {
-//         Soup,
-//         Salad,
-//     }
-// }
-//
-// pub fn eat_at_restaurant() {
-//     let order1 = back_of_house::Appetizer::Soup;
-//     let order2 = back_of_house::Appetizer::Salad;
-//
-//     println!("I'd like to order {:?} please", order1);
-//     println!("I'd like to order {:?} please", order2);
-// }
-
+pub fn print_using_pub_with_enums() {
+    using_pub_with_enums::eat_at_restaurant();
+}
