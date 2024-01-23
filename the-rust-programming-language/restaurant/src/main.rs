@@ -21,4 +21,7 @@ fn main() {
 
     println!("=====print_add_new_name_with_as_keyword=====");
     restaurant::print_add_new_name_with_as_keyword();
+
+    println!("=====print_re_exporting_names_with_pub_and_new_keywords=====");
+    restaurant::print_re_exporting_names_with_pub_and_new_keywords();
 }

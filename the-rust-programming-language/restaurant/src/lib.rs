@@ -4,26 +4,8 @@ mod relative_path_with_super;
 mod using_pub_with_struct;
 mod using_pub_with_enums;
 mod new_name_with_as_key_word;
-
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {
-            println!("Adding to wait list...")
-        }
-
-        fn seat_at_table() {
-            println!("Seating at the table...")
-        }
-    }
-
-    pub mod serving {
-        fn take_order() {}
-
-        fn serve_order() {}
-
-        fn take_payment() {}
-    }
-}
+mod re_exporting_names_with_pub_and_use_keywords;
+mod front_of_house;
 
 
 pub fn eat_at_restaurant() {
@@ -78,4 +60,11 @@ pub fn print_using_pub_with_enums() {
 pub fn print_add_new_name_with_as_keyword() {
     new_name_with_as_key_word::function1().expect("Do something in fn 1");
     new_name_with_as_key_word::function2().expect("Do something in fn 2");
+}
+
+/*
+* Re-exporting name with `pub` & `new` keywords
+*/
+pub fn print_re_exporting_names_with_pub_and_new_keywords() {
+    re_exporting_names_with_pub_and_use_keywords::eat_at_restaurant();
 }
