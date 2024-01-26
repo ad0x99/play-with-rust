@@ -3,12 +3,12 @@ mod strings;
 mod vector;
 
 fn main() {
-    println!("=============vector::run_vector()============");
+    println!("=============VECTORS in Rust============");
     vector::run_vector();
 
-    println!("=============strings::run_strings()============");
+    println!("=============STRINGS in Rust============");
     strings::run_strings();
 
-    println!("=============hashmap::run_hashmap()============");
+    println!("=============HASHMAP in Rust============");
     hashmap::run_hashmap()
 }
