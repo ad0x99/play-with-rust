@@ -72,7 +72,7 @@ fn read_elements_of_vector() {
 }
 
 fn ownership_and_borrowing_with_vector() {
-    let mut v = vec![1, 2, 3, 4, 5];
+    let v = vec![1, 2, 3, 4, 5];
 
     let first = &v[0];
 
