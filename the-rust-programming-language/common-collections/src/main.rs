@@ -1,3 +1,4 @@
+mod hashmap;
 mod strings;
 mod vector;
 
@@ -7,4 +8,7 @@ fn main() {
 
     println!("=============strings::run_strings()============");
     strings::run_strings();
+
+    println!("=============hashmap::run_hashmap()============");
+    hashmap::run_hashmap()
 }
