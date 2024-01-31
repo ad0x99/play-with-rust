@@ -5,9 +5,12 @@
       <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/backyard/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/common-programming-concepts/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/restaurant/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/error-handling/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/restaurant/error-handling/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/backyard/target" />
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/common-programming-concepts/target" />
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/restaurant/target" />
+      <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/error-handling/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
