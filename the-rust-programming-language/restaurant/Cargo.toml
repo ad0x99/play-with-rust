@@ -1,4 +1,3 @@
-workspace = { members = ["error-handling"] }
 [package]
 name = "restaurant"
 version = "0.1.0"

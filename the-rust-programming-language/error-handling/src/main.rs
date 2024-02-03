@@ -10,5 +10,5 @@ fn main() {
     // recoverable_error::run_unrecoverable_error();
 
     println!("========Propagating Errors========");
-    propagating_error::run_propagating_error();
+    propagating_error::run_propagating_error().expect("Error");
 }
