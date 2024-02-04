@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/error-handling/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/restaurant/error-handling/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/generic-types-traits-lifetimes/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/generic-types-traits-lifetimes/aggregator/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/backyard/target" />
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/common-programming-concepts/target" />
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/restaurant/target" />
