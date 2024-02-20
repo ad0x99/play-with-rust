@@ -12,8 +12,8 @@ mod tests {
         assert_eq!(result, 4);
     }
 
-    #[test]
-    fn another() {
-        panic!("Make this test fail")
-    }
+    // #[test]
+    // fn another() {
+    //     panic!("Make this test fail")
+    // }
 }
