@@ -1,5 +1,10 @@
 mod closure;
+mod iterators;
 
 fn main() {
-    closure::closure()
+    println!("=================Closure=================");
+    closure::closure();
+
+    println!("=================Iterators=================");
+    iterators::iterators()
 }
