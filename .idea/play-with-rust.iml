@@ -13,6 +13,8 @@
       <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/testing-in-rust/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/adder/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/minigrep/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/add/add_one/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/the-rust-programming-language/add/adder/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/backyard/target" />
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/common-programming-concepts/target" />
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/restaurant/target" />
@@ -21,6 +23,7 @@
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/adder/target" />
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/testing-in-rust/target" />
       <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/minigrep/target" />
+      <excludeFolder url="file://$MODULE_DIR$/the-rust-programming-language/add/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
