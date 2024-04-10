@@ -1,5 +1,5 @@
 [workspace]
 
 members = [
-  "box_t_data_on_heap", "reference-with-deref",
+  "box_t_data_on_heap", "reference-cycles-and-memory-leak", "reference-with-deref",
 ]
