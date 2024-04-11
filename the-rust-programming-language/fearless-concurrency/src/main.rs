@@ -1,4 +1,5 @@
 mod create_new_thread;
+mod transfer_data_using_channels;
 
 fn main() {
     println!("============Create new thread============");
@@ -10,4 +11,7 @@ fn main() {
     println!("============Using move Closures with Threads============");
     create_new_thread::move_closure_with_thread();
     create_new_thread::invalid_reference();
+
+    println!("============Transferring Data Between Threads Using Channels============");
+    transfer_data_using_channels::run_channels();
 }
