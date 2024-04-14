@@ -1,4 +1,5 @@
 mod create_new_thread;
+mod shared_state_concurrency;
 mod transfer_data_using_channels;
 
 fn main() {
@@ -14,4 +15,7 @@ fn main() {
 
     println!("============Transferring Data Between Threads Using Channels============");
     transfer_data_using_channels::run_channels();
+
+    println!("============Shared-State Concurrency============");
+    shared_state_concurrency::run_shared_state()
 }
