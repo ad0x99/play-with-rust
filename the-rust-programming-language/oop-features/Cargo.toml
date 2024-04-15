@@ -1,4 +1,4 @@
-workspace = { members = ["gui"] }
+workspace = { members = [ "blog", "blog_encoding_state","gui"] }
 [package]
 name = "oop-features"
 version = "0.1.0"
@@ -8,3 +8,5 @@ edition = "2021"
 
 [dependencies]
 gui = {path = "./gui"}
+blog = {path = "./blog"}
+blog_encoding_state = {path = "./blog_encoding_state"}

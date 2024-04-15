@@ -1,3 +1,5 @@
+use blog::Post;
+use blog_encoding_state::Post as EncodingPost;
 use gui::Draw;
 use gui::{Button, Screen};
 
@@ -14,6 +16,12 @@ impl Draw for SelectBox {
 }
 
 fn main() {
+    run_gui();
+    run_blog();
+    run_blog_encoding_state();
+}
+
+fn run_gui() {
     let screen = Screen {
         components: vec![
             Box::new(SelectBox {
@@ -36,4 +44,33 @@ fn main() {
     };
 
     screen.run();
+}
+
+fn run_blog() {
+    let mut post = Post::new();
+
+    post.add_text("I ate a salad for lunch today");
+    assert_eq!("", post.content());
+
+    post.request_review();
+    assert_eq!("", post.content());
+
+    post.approve();
+    assert_eq!("I ate a salad for lunch today", post.content());
+
+    println!("{}", post.content());
+}
+
+fn run_blog_encoding_state() {
+    let mut post = EncodingPost::new();
+
+    post.add_text("I ate a salad for lunch today");
+
+    let post = post.request_review();
+
+    let post = post.approve();
+
+    assert_eq!("I ate a salad for lunch today", post.content());
+
+    println!("{}", post.content());
 }
