@@ -1,4 +1,5 @@
 mod advanced_traits;
+mod advanced_types;
 mod unsafe_rust;
 
 fn main() {
@@ -7,4 +8,7 @@ fn main() {
 
     println!("Running advanced traits...");
     advanced_traits::run_advanced_traits();
+
+    println!("Running advanced types...");
+    advanced_types::run_advanced_types();
 }
