@@ -1,5 +1,5 @@
 fn never_type() -> ! {
-    // The never type with the panic! macro
+    // The never type with the panic! advanced_macro
     // impl<T> Option<T> {
     //     pub fn unwrap(self) -> T {
     //         match self {
