@@ -1,0 +1,21 @@
+version: '3.9' # Specify the version of Docker Compose
+
+services:
+  health-check:
+    image: adondev/health-check # Image for the health-check service
+    build:
+      context: . # Context for building the Docker image
+      dockerfile: Dockerfile-health # Dockerfile to use for building the image
+    restart: 'always' # Always restart the container if it stops
+    depends_on:
+      auth:
+        condition: service_started # Start health-check service after auth service has started
+
+  auth:
+    image: adondev/auth # Image for the auth service
+    build:
+      context: . # Context for building the Docker image
+      dockerfile: Dockerfile-auth # Dockerfile to use for building the image
+    restart: 'always' # Always restart the container if it stops
+    ports:
+      - '50052:50052' # Map port 50052 of the host to port 50052 of the container

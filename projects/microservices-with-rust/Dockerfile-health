@@ -1,0 +1,56 @@
+# Use the Rust official image with Alpine Linux as the base image for the build stages
+FROM rust:1.84-alpine3.20 AS chef
+
+# Switch to the root user
+USER root
+
+# Set the cargo registry protocol to sparse (remove this line for Rust >= 1.70.0)
+ENV CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
+
+# Install necessary packages and cargo-chef
+RUN apk add --no-cache musl-dev && cargo install cargo-chef
+
+# Set the working directory
+WORKDIR /microservices-with-rust
+
+# Use the chef stage to prepare the build plan
+FROM chef AS planner
+
+# Copy the entire project into the container
+COPY . .
+
+# Generate the cargo build plan (recipe.json)
+RUN cargo chef prepare --recipe-path recipe.json
+
+# Use the chef stage to build the dependencies and the application
+FROM chef AS builder
+
+# Copy the build plan from the planner stage
+COPY --from=planner /microservices-with-rust/recipe.json recipe.json
+
+# Build dependencies - this is the caching Docker layer!
+RUN cargo chef cook --release --recipe-path recipe.json
+
+# Install protoc (Protocol Buffers compiler)
+RUN apk add --no-cache protoc
+
+# Copy the entire project into the container again
+COPY . .
+
+# Build the application binary
+RUN cargo build --release --bin health-check
+
+# Use a minimal Debian image for the runtime stage
+FROM debian:buster-slim AS runtime
+
+# Set the working directory
+WORKDIR /microservices-with-rust
+
+# Copy the built binary from the builder stage
+COPY --from=builder /microservices-with-rust/target/release/health-check /usr/local/bin
+
+# Set environment variables
+ENV AUTH_SERVICE_HOST_NAME=auth
+
+# Set the entry point to the built binary
+ENTRYPOINT ["/usr/local/bin/health-check"]
