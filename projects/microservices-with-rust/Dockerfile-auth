@@ -23,7 +23,7 @@ COPY . .
 RUN cargo build --release --bin auth
 
 # Use a minimal Debian image for the runtime stage
-FROM debian:buster-slim AS runtime
+FROM debian:13.1-slim AS runtime
 WORKDIR /microservices-with-rust
 # Copy the built binary from the builder stage
 COPY --from=builder /microservices-with-rust/target/release/auth /usr/local/bin
