@@ -41,7 +41,7 @@ COPY . .
 RUN cargo build --release --bin health-check
 
 # Use a minimal Debian image for the runtime stage
-FROM debian:buster-slim AS runtime
+FROM debian:13.1-slim AS runtime
 
 # Set the working directory
 WORKDIR /microservices-with-rust
